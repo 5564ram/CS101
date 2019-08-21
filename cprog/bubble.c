@@ -11,6 +11,7 @@ int main(int argc, char const *argv[])
 	{
 		scanf("%d",&arr[i]);
 	}
+	//This sorting technique has O(N^2) complexity 
 	for(int i=0;i<l;i++)
 	{
 		for(int j=0;j<l-i-1;j++)
