@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define long long int lli
+int main()
+{
+  lli n,k=1,rem[10^6];
+  scanf("%lld", &n);
+  n=n/10;
+  rem[0]=n%10;
+  while(n>0)
+  {
+    rem[k] = n % 10;
+    
+    n = n / 10;
+    k=k+1;
+
+  }
+  for(lli j=1; j<k; ++j)
+  
+      for(lli m=j+1; m<=k; ++m)
+      {
+          if(rem[j]==rem[m])
+          {
+          printf("%d",1);
+          break;
+          }
+      }
+  
+}
+
