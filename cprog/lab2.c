@@ -1,40 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-struct poly
-{
-    int coef;
-    int pow;
-    struct poly* next;
-};
-void menu()
-{
-printf("    POLYNOMIAL ADDITION PROGRAM    \n");
-}
-void create_poly(struct poly ** p) 
-{
-    int flag;
-    int coeff, pow;
-    struct poly * temp;
-    temp = (struct poly *) malloc(sizeof(struct poly));
-    *p = temp;
-    do {
-        printf("\nEnter Coeff:");
-        scanf("%d", &coeff);
-        temp->coef = coeff;
-        printf("\nEnter Pow:");
-        scanf("%d", &pow);
-        temp->pow = pow;
-        temp->next = NULL;
-        printf("\n enter Y=1 for more element: \n");
-        scanf("%d", &flag);
-        if(flag==1) {
-            temp->next = (struct poly *) malloc(sizeof(struct poly));
-            temp = temp->next;
-            temp->next = NULL;
-        }
-    } while (flag==1);
-}
+
 void display_poly(struct poly *p) 
 {
     printf("\nThe polynomial expression is:\n");
